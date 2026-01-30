@@ -1,0 +1,30 @@
+body{
+    margin: 0;
+}
+
+a, h4, h5, h6, p, i{
+    text-decoration: none;
+    color: #000;
+
+    font-family: "DM Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+}
+
+h1, h2, h3{
+    text-decoration: none;
+    color: #000;
+
+    font-family: "DM Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+}
+
+b{
+    text-decoration: none;
+    color: #000;
+
+    font-family: "DM Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+}
