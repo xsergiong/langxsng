@@ -3,9 +3,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alphabet</title>
+    <link rel="stylesheet" href="../../src/css/libraries/langpalettes/langpalettes.css">
+    <link rel="stylesheet" href="../../src/css/libraries/fastdecor/fastdecor.css">
+    <link rel="stylesheet" href="../../src/css/standard.css">
+    <title>Alfabeto</title>
 </head>
 <body>
+    <header class=" green c1">
+        <nav style="display: flex;">
+            <p class="offset h1"><a href="../general/languages.html"><b class="roboto">Return</b></a></p>
+        </nav>
+    </header>
+
+    <main>
+        <h1 class="roboto offset h1">The Alphabet/El abecedario/El alfabeto</h1>
+
+        <section class="offset h1">
+            <div>
+                <h3 class="roboto" id="main-title">Aa</h3>
+            </div>
+            <p>Examples:</p>
+            <ul>
+                <li class="example">Amigo/(M)Friend</li>
+                <li class="example">Araña/Spider</li>
+            </ul>
+        </section>
+
+        <table class="green c4 offset h1" style="border-spacing: 3vw;">
+            <tr>
+                <td class="roboto selectable">Aa</td>
+                <td class="roboto selectable">Bb</td>
+                <td class="roboto selectable">Cc</td>
+                <td class="roboto selectable">Dd</td>
+                <td class="roboto selectable">Ee</td>
+            </tr>
+            <tr>
+                <td class="roboto">Ff</td>
+                <td class="roboto">Gg</td>
+                <td class="roboto">Hh</td>
+                <td class="roboto">Ii</td>
+                <td class="roboto">Jj</td>
+            </tr>
+            <tr>
+                <td class="roboto">Kk</td>
+                <td class="roboto">Ll</td>
+                <td class="roboto">Mm</td>
+                <td class="roboto">Nn</td>
+                <td class="roboto">Ññ</td>
+            </tr>
+            <tr>
+                <td class="roboto">Oo</td>
+                <td class="roboto">Pp</td>
+                <td class="roboto">Qq</td>
+                <td class="roboto">Rr</td>
+                <td class="roboto">Ss</td>
+            </tr>
+            <tr>
+                <td class="roboto">Tt</td>
+                <td class="roboto">Uu</td>
+                <td class="roboto">Vv</td>
+                <td class="roboto">Ww</td>
+                <td class="roboto">Xx</td>
+            </tr>
+            <tr>
+                <td class="roboto">Yy</td>
+                <td class="roboto">Zz</td>
+            </tr>
+        </table>
+    </main>
     
+    <script type="module">
+        import script from '../../src/js/app.js';
+
+        script.LinkItemsToEvent(document.getElementsByClassName("selectable"), script.AlphabetHTML);
+    </script>
 </body>
 </html>
