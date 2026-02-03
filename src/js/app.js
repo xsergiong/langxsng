@@ -40,7 +40,7 @@ function AlphabetHTML(item)
     SetText(title, aux.letter);
     SetTextArrayFromArray(examples, aux.examples);
 
-    PlaySound(aux.pronunciation);
+    //PlaySound(aux.pronunciation);
 }
 
 export default{

@@ -16,16 +16,29 @@
     </header>
 
     <main>
-        <h1 class="roboto offset h1">The Alphabet/El abecedario/El alfabeto</h1>
+        <h1 class="roboto offset h1">El abecedario/El alfabeto/The Alphabet</h1>
+
+        <section class="offset h1">
+            <h4 class="roboto">Notas/Notes</h4>
+            <ul>
+                <li class="roboto">(F) = Variante femenina/Feminine variant</li>
+                <li class="roboto">(M) = Variante masculina/Masculine variant</li>
+                <li class="roboto">(n) = Sustantivo/Noun</li>
+                <li class="roboto">(v) = Verbo/Verb</li>
+                <li class="roboto">(a) = Adjetivo/Adjective</li>
+                <li class="roboto">(<i>otro texto/other text</i>) = Clarificación/Clarification</li>
+                </ul>
+            <p class="roboto">Aparecerán notas solo en las palabras que lo requieran/Notes will appear only in the words that require so</p>
+        </section>
 
         <section class="offset h1">
             <div>
                 <h3 class="roboto" id="main-title">Aa</h3>
             </div>
-            <p>Examples:</p>
+            <p class="roboto">Ejemplos/Examples:</p>
             <ul>
-                <li class="example">Amigo/(M)Friend</li>
-                <li class="example">Araña/Spider</li>
+                <li class="example roboto">Amigo/(M)Friend</li>
+                <li class="example roboto">Araña/Spider</li>
             </ul>
         </section>
 
@@ -38,40 +51,51 @@
                 <td class="roboto selectable">Ee</td>
             </tr>
             <tr>
-                <td class="roboto">Ff</td>
-                <td class="roboto">Gg</td>
-                <td class="roboto">Hh</td>
-                <td class="roboto">Ii</td>
-                <td class="roboto">Jj</td>
+                <td class="roboto selectable">Ff</td>
+                <td class="roboto selectable">Gg</td>
+                <td class="roboto selectable">Hh</td>
+                <td class="roboto selectable">Ii</td>
+                <td class="roboto selectable">Jj</td>
             </tr>
             <tr>
-                <td class="roboto">Kk</td>
-                <td class="roboto">Ll</td>
-                <td class="roboto">Mm</td>
-                <td class="roboto">Nn</td>
-                <td class="roboto">Ññ</td>
+                <td class="roboto selectable">Kk</td>
+                <td class="roboto selectable">Ll</td>
+                <td class="roboto selectable">Mm</td>
+                <td class="roboto selectable">Nn</td>
+                <td class="roboto selectable">Ññ</td>
             </tr>
             <tr>
-                <td class="roboto">Oo</td>
-                <td class="roboto">Pp</td>
-                <td class="roboto">Qq</td>
-                <td class="roboto">Rr</td>
-                <td class="roboto">Ss</td>
+                <td class="roboto selectable">Oo</td>
+                <td class="roboto selectable">Pp</td>
+                <td class="roboto selectable">Qq</td>
+                <td class="roboto selectable">Rr</td>
+                <td class="roboto selectable">Ss</td>
             </tr>
             <tr>
-                <td class="roboto">Tt</td>
-                <td class="roboto">Uu</td>
-                <td class="roboto">Vv</td>
-                <td class="roboto">Ww</td>
-                <td class="roboto">Xx</td>
+                <td class="roboto selectable">Tt</td>
+                <td class="roboto selectable">Uu</td>
+                <td class="roboto selectable">Vv</td>
+                <td class="roboto selectable">Ww</td>
+                <td class="roboto selectable">Xx</td>
             </tr>
             <tr>
-                <td class="roboto">Yy</td>
-                <td class="roboto">Zz</td>
+                <td class="roboto selectable">Yy</td>
+                <td class="roboto selectable">Zz</td>
             </tr>
         </table>
     </main>
     
+    <style>
+        .selectable{
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            -khtml-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+    </style>
+
     <script type="module">
         import script from '../../src/js/app.js';
 

@@ -7,7 +7,7 @@ a{
     color: #000;
 }
 
-a.roboto, h4.roboto, h5.roboto, h6.roboto, p.roboto, i.roboto, td.roboto{
+a.roboto, h4.roboto, h5.roboto, h6.roboto, p.roboto, i.roboto, td.roboto, li.roboto{
     font-family: "DM Sans", sans-serif;
     font-optical-sizing: auto;
     font-weight: 300;
