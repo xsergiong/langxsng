@@ -24,3 +24,16 @@ b.roboto{
     font-optical-sizing: auto;
     font-weight: 700;
 }
+
+h1{
+    font-size: 96px;
+}
+h2{
+    font-size: 72px;
+}
+h3{
+    font-size: 56px;
+}
+h4{
+    font-size: 48px;
+}
