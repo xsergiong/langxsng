@@ -11,6 +11,7 @@ The website which will have the necessary material for Bahar Salahshoor to learn
 
 ## Updates
 * 0.1.0
+* 0.1.1
 
 ## Next goals
 * Listing of options with styles

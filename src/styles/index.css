@@ -1,0 +1,12 @@
+@media only screen and (max-width: 1080px)
+{
+    
+}
+
+@media only screen and (min-height: 2160px)
+{
+    header
+    {
+        height: 12vh;
+    }
+}
