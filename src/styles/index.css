@@ -5,8 +5,16 @@
 
 @media only screen and (min-height: 2160px)
 {
-    header
+    header{
+        height: 9vh;
+    }
+
+    .icon
     {
-        height: 12vh;
+        width: 9vh;
+    }
+
+    .block img{
+        width: 4vh;
     }
 }

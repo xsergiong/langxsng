@@ -107,7 +107,8 @@ function CreateBlock(textContent, imageName, className)
     let text = document.createElement("h4");
     let image = document.createElement("img");
     let imagePath = "./assets/images/" + className + "/" + imageName;
-    block.className = className;
+    block.classList.add(className);
+    block.classList.add("block");
     text.textContent = textContent;
     image.src = imagePath;
     block.appendChild(text);
