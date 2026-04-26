@@ -1,4 +1,4 @@
-const feedDiv = document.getElementById("feed");
+const FEED = document.getElementById("feed");
 
 let language = "";
 let category = "";
@@ -14,8 +14,6 @@ function UpdateLanguage(newLanguage)
 {
     language = newLanguage;
 
-    console.log(language);
-
     UpdateFeed();
 }
 function UpdateCategory(newCategory)
@@ -26,7 +24,7 @@ function UpdateCategory(newCategory)
 }
 function UpdateUnit(newUnit)
 {
-    unit = newcategory;
+    unit = newUnit;
 
     UpdateFeed();
 }
@@ -36,11 +34,9 @@ function UpdatePoint(newPoint)
 
     UpdateFeed();
 }
-
+ 
 function UpdateFeed()
 {
-    EmptyFeed();
-
     if (language == "")
     {
         CreateFeed("languageBlocks")
@@ -72,58 +68,78 @@ function UpdateFeed()
 
 function EmptyFeed()
 {
-    let feedBlocks = feedDiv.children;
+    let feedBlocks = FEED.childNodes;
     
-    if (feedBlocks.length == 0)
+    let index = feedBlocks.length - 1;
+
+    if (index == 0)
         return;
 
-    feedBlocks.forEach(block => 
+    for (let i = index; i > 0; i--)
     {
-        block.remove();
-    });
+        DeleteBlock(feedBlocks[i]);
+    }
 
     BLOCKAUDIOSMAP.clear();
 }
 
+function DeleteBlock(block)
+{
+    block.remove();
+}
+
 function CreateFeed(blocksArrayName)
 {
+    EmptyFeed();
+
     let path = globalPath + "/json/" + blocksArrayName + ".json";
 
     fetch(path)
         .then(res => res.json())
         .then(data => 
         {
-            data.languageBlocks.forEach(block =>
+            data.blocksArray.forEach(block =>
             {
-                CreateBlock(block.text, block.imageName, data.className);
+                CreateBlock(block.text, block.imageName, data.className, data.functionName);
             })
         });
 }
 
-function CreateBlock(textContent, imageName, className)
+function CreateBlock(textContent, imageName, className, functionName) 
 {
+    console.log("Creating block");
 
     let block = document.createElement("div");
-    let text = document.createElement("h4");
+    let text = document.createElement("h5");
     let image = document.createElement("img");
-    let imagePath = "./assets/images/" + className + "/" + imageName;
+
+    let directoryPath = "./assets/images/" + className + "/";
+    let imagePath = directoryPath + imageName;
+
     block.classList.add(className);
     block.classList.add("block");
-    text.textContent = textContent;
+    block.setAttribute("onClick", functionName + "('" + textContent + "')");
+
+    text.textContent = RemoveCharacterInString(textContent, "_");
+
     image.src = imagePath;
+
     block.appendChild(text);
-    block.appendChild(image);
-    feedDiv.appendChild(block);
+
+    if (imagePath != directoryPath + "undefined")
+        block.appendChild(image);
+    
+    FEED.appendChild(block);
 }
 
 function GoHome()
 {
-    UpdateLanguage("");
-    UpdateCategory("");
-    UpdateUnit("");
-    UpdatePoint("");
+    language = "";
+    category = "";
+    unit = "";
+    point = "";
+    UpdateFeed();
 }
-
 
 function GetBlocks()
 {
@@ -180,6 +196,21 @@ function PlayAudio(audioFileName)
     sound.Play();
 }
 
+function RemoveCharacterInString(stringToChange, characterToRemove)
+{
+    let stringArray = stringToChange.split("");
+    let index = stringArray.length;
+
+    for (let i = 0; i < index; i++)
+    {
+        if (stringArray[i] == characterToRemove)
+        {
+            stringArray[i] = " ";
+        }
+    }
+
+    return stringArray.join(""); 
+}
 
 //OnLoad
 UpdateFeed();

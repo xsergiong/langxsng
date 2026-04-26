@@ -1,9 +1,10 @@
 {
 	"className":"languageBlocks",
-	"languageBlocks":
+	"functionName":"UpdateLanguage",
+	"blocksArray":
 	[
 		{
-            "text":"Spanish",
+            "text":"spanish",
             "imageName":"spainFlag.jpg"
         }
 	]

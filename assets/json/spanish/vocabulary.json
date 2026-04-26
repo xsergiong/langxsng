@@ -1,0 +1,13 @@
+{
+	"className":"unitBlocks",
+	"functionName":"UpdateUnit",
+	"blocksArray":
+	[
+		{
+            "text":"unit_1"
+        },
+        {
+            "text":"unit_2"
+        }
+	]
+}

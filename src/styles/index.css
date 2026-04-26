@@ -1,9 +1,42 @@
-@media only screen and (max-width: 1080px)
+@media only screen and (min-height: 1600px)
 {
-    
+    header{
+        height: 9vh;
+    }
+
+    #feed{
+        margin: 5vw;
+    }
+
+    .icon
+    {
+        width: 9vh;
+    }
+
+    .block{
+        display: flex;
+        border: 2px black solid;
+        padding: 9vw;
+        height: 4vh;
+        margin-bottom: 1vh;
+    }
+
+    .block h5{
+        position: relative;
+        bottom: 9.2vh;
+    }
+
+    .block img{
+        position: relative;
+        margin-left: 10vw;
+        bottom: 1vh;
+        width: 9vh;
+        height: 6vh;
+        border: 2px black solid;
+    }
 }
 
-@media only screen and (min-height: 2160px)
+@media only screen and (max-height: 800px)
 {
     header{
         height: 9vh;
@@ -17,4 +50,8 @@
     .block img{
         width: 4vh;
     }
+}
+
+.block h5::first-letter{
+    text-transform: uppercase;
 }

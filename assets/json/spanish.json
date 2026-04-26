@@ -1,0 +1,13 @@
+{
+	"className":"categoryBlocks",
+	"functionName":"UpdateCategory",
+	"blocksArray":
+	[
+		{
+            "text":"vocabulary"
+        },
+        {
+            "text":"grammar"
+        }
+	]
+}
